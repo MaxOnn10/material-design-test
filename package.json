@@ -1,0 +1,15 @@
+{
+  "name": "material",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@material/web": "^1.2.0",
+    "@web/dev-server": "^0.4.1"
+  }
+}

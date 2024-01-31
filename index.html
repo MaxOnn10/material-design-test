@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <md-text-button>Hello World</md-text-button>
+        <label>
+            Material 3
+            <md-checkbox checked></md-checkbox>
+        </label>
+
+        <md-outlined-button>Back</md-outlined-button>
+        <md-filled-button>Next</md-filled-button>
+        
+        <md-divider></md-divider>
+
+        <!-- menu -->
+        <!-- Note the position: relative style -->
+        <span style="position: relative">
+            <md-filled-button id="usage-anchor">Set with idref</md-filled-button>
+            <md-menu id="usage-menu" anchor="usage-anchor">
+                <md-menu-item>
+                    <div slot="headline">Apple</div>
+                </md-menu-item>
+                <md-menu-item>
+                    <div slot="headline">Banana</div>
+                </md-menu-item>
+                <md-menu-item>
+                    <div slot="headline">Cucumber</div>
+                </md-menu-item>
+            </md-menu>
+        </span>
+
+        <script type="module">
+            // This example uses anchor as an ID reference
+            const anchorEl = document.body.querySelector('#usage-anchor');
+            const menuEl = document.body.querySelector('#usage-menu');
+
+            anchorEl.addEventListener('click', () => { menuEl.open = !menuEl.open; });
+        </script>
+
+        <span style="position: relative">
+            <md-filled-button id="usage-anchor-2">Set with element ref</md-filled-button>
+            <md-menu id="usage-menu-2">
+                <md-menu-item>
+                    <div slot="headline">Apple</div>
+                </md-menu-item>
+                <md-menu-item>
+                    <div slot="headline">Banana</div>
+                </md-menu-item>
+                <md-menu-item>
+                    <div slot="headline">Cucumber</div>
+                </md-menu-item>
+            </md-menu>
+        </span>
+
+        <md-divider></md-divider>
+
+        <!-- switch -->
+        <label>
+            Wi-Fi
+            <md-switch selected></md-switch>
+        </label>
+
+        <label for="switch">Bluetooth</label>
+        <md-switch id="switch"></md-switch>
+
+    </div>
+
+
+    <script type="module" src="./src/index.js"></script>
+</body>
+
+</html>
